@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LoganのWIKI</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link href='//cdn.jsdelivr.net/gh/loganautomata/cdn@master/wiki/css/pio.min.css' rel='stylesheet'
+    type='text/css' />
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/loganautomata/cdn@master/wiki/images/logo-wiki.png"
+    type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="google-site-verification" content="RvwKOdq6aB9alzGivD26G6rNK7BgpcuTEt4wdve3qo0" />
+</head>
+
+<body>
+  <div id="app">
+  </div>
+
+  <script>
+    //docsify配置项
+    window.$docsify = {
+      el: '#app',
+      repo: 'https://github.com/loganautomata',
+      maxLevel: 6,
+      subMaxLevel: 6,
+      loadNavbar: false,
+      mergeNavbar: false,
+      loadSidebar: true,
+      autoHeader: false,
+      coverpage: true,
+      name: 'LoganのWIKI',
+      nameLink: 'https://wiki.loganren.xyz',
+      relativePath: false,
+      homepage: 'home.md',
+
+      //搜索插件
+
+      search: 'auto', // 默认值
+
+      search: [
+        '/home.md',
+        '/API/',
+        '/GraphTheory/',
+        '/Python/',
+      ],
+
+      // 完整配置参数
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', //[] or 'auto'
+        placeholder: 'Type to search',
+
+        // 支持本地化
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': '想要找点什么呢?'
+        },
+
+        noData: 'No Results!',
+
+        // 支持本地化
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': '这里什么也没有呢!'
+        },
+
+        // 搜索标题的最大层级, 1 - 6
+        depth: 6,
+
+        hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+
+        // 避免搜索索引冲突
+        // 同一域下的多个网站之间
+        // namespace: 'wiki.loganren.xyz',
+
+        // 使用不同的索引作为路径前缀（namespaces）
+        // 注意：仅适用于 paths: 'auto' 模式
+        //
+        // 初始化索引时，我们从侧边栏查找第一个路径
+        // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+        pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+        // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+        // 匹配到的字符串将被用来识别索引
+        pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+      },
+
+      //字数统计
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+
+      //页脚
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<div align="center">',
+            '<span class="cover">',
+            'Powered by ',
+            '<a href="https://docsify.js.org/" target="_blank" style="color: #b9b9b9; hover{color: #FE9600}">Docsify</a>',
+            '</span>',
+            '<br />',
+            '<a href="https://beian.bizcn.com/" target="_blank" style="color: #b9b9b9; hover{color: #FE9600}">鲁ICP备20000906号</a>',
+            '<br />',
+            '<span class="cover">',
+            '&copy2019-' + (new Date).getFullYear(),
+            '<img class="rotating" style="color: #ffc0cb;display:inline-block;width:16px;height:16px" src="https://cdn.jsdelivr.net/gh/loganautomata/cdn@master/wiki/images/logo-wiki.png"></img>',
+            '<a href="https://wiki.loganren.xyz/" target="_blank" style="color: #b9b9b9;">LoganのWIKI</a>',
+            '</span>',
+            '</div>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        }
+      ]
+
+    };
+  </script>
+
+  <style>
+    @-webkit-keyframes rotating {
+      from {
+        -webkit-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0)
+      }
+
+      to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes rotating {
+      from {
+        -ms-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0)
+      }
+
+      to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg)
+      }
+    }
+
+    .rotating {
+      -webkit-animation: rotating 10s linear infinite;
+      -moz-animation: rotating 10s linear infinite;
+      -ms-animation: rotating 10s linear infinite;
+      -o-animation: rotating 10s linear infinite;
+      animation: rotating 10s linear infinite
+    }
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .cover {
+      color: #b9b9b9;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  </style>
+
+  <script src='//cdn.jsdelivr.net/gh/loganautomata/cdn@master/wiki/js/l2d.js'></script>
+  <script src='//cdn.jsdelivr.net/gh/loganautomata/cdn@master/wiki/js/pio.min.js'></script>
+  <script src='js/sagiri.js'></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/loganautomata/cdn@master/wiki/js/countable.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-csharp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-regex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-git.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-nginx.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-json.min.js"></script>
+
+</body>
+
+</html>

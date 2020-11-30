@@ -1,0 +1,17 @@
+.avatar{
+	border: #000 solid 2px;
+	display: block;
+	margin: 50px auto;
+	border-radius: 50%;
+	transition: all 2.0s;
+}
+
+.avatar:hover{
+	transform: rotate(360deg);
+}
+
+.box{
+	height: 160px;
+	width: 160px;
+	margin: 0 auto;
+}
