@@ -17,17 +17,27 @@
 | 字段        | 类型            | 空   | 默认 | 注释             |
 | :---------- | :-------------- | :--- | ---- | ---------------- |
 | id          | bigint unsigned | 否   |      | 主键             |
-| course_id   | bigint unsigned | 否   |      | 唯一索引, 课程ID |
-| coursename  | varchar(13)     | 否   |      | 课程名           |
+| cid         | bigint unsigned | 否   |      | 唯一索引, 课程ID |
+| coursename  | varchar(23)     | 否   |      | 课程名           |
 | teachername | varchar(13)     | 否   |      | 教师名           |
 | score       | int             | 否   |      | 课程评分         |
 
 ## 评分表
 
-| 字段        | 类型            | 空   | 默认 | 注释             |
-| :---------- | :-------------- | :--- | ---- | ---------------- |
-| id          | bigint unsigned | 否   |      | 主键             |
-| course_id   | bigint unsigned | 否   |      | 外键, 评分课程ID |
-| username    | varchar(13)     | 否   |      | 外键, 评分用户名 |
-| score       | int             | 否   |      | 评分             |
-| create_time | int unsigned    | 否   |      | 评分时间         |
+| 字段        | 类型            | 空   | 默认 | 注释       |
+| :---------- | :-------------- | :--- | ---- | ---------- |
+| id          | bigint unsigned | 否   |      | 主键       |
+| user_id     | bigint unsigned | 否   |      | 评分课程ID |
+| course_id   | bigint unsigned | 否   |      | 评分用户ID |
+| score       | int             | 否   |      | 评分       |
+| create_time | int unsigned    | 否   |      | 评分时间   |
+
+## 评论表
+
+| 字段        | 类型            | 空   | 默认 | 注释       |
+| :---------- | :-------------- | :--- | ---- | ---------- |
+| id          | bigint unsigned | 否   |      | 主键       |
+| user_id     | bigint unsigned | 否   |      | 评分课程ID |
+| course_id   | bigint unsigned | 否   |      | 评分用户ID |
+| comments    | text            | 否   |      | 评论       |
+| create_time | int unsigned    | 否   |      | 评分时间   |

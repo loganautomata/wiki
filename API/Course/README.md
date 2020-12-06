@@ -1,3 +1,6 @@
 # 课程设计API
 
-此为中国海洋大学2020年软件工程课程中国海洋大学公共课程评价网站项目的后端API文档.
+* [业务状态码](API/Course/Status.md)
+* [数据字典](API/Course/DataDictionary.md)
+* [文档说明](API/Course/Introduction.md)
+* [API](API/Course/API.md)

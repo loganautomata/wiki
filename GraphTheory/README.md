@@ -1,3 +1,10 @@
 # 离散数学
 
-主要记录了图论的知识总结, 以及数理逻辑等离散数学基础知识. 离散数学系教程未完待续.
+* [离散基础知识](GraphTheory/GraphTheory0.md)
+* [图论基础知识](GraphTheory/GraphTheory1.md)
+* [欧拉图与哈密顿图](GraphTheory/GraphTheory2.md)
+* [树](GraphTheory/GraphTheory3.md)
+* [矩阵](GraphTheory/GraphTheory4.md)
+* [平面图](GraphTheory/GraphTheory5.md)
+
+未完待续...

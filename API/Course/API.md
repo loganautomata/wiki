@@ -307,3 +307,203 @@
 ### 备注
 
 需要在请求头中附上用户的Token, 用户状态码0表示正常1表示异常登录处于封禁状态.
+
+## 分页课程信息查询接口
+
+### 请求URL
+
+- `/course`
+
+### 请求方式
+
+- GET
+
+### 参数
+
+|   参数名   | 必选 | 类型 |     说明     |
+| :--------: | :--: | :--: | :----------: |
+| pageNumber |  是  | int  |     页码     |
+|  pageSize  |  是  | int  | 每页数据行数 |
+
+### 返回示例
+
+#### 成功实例
+
+```json
+{
+    "code": 200,
+    "message": "第3页课程信息",
+    "data": {
+        "count": 13,
+        "pageInfo": [
+            {
+                "cid": 6,
+                "coursename": "Assassin's Creed Unity",
+                "teachername": "Arno",
+                "score": 100
+            },
+            {
+                "cid": 7,
+                "coursename": "Nier Automata",
+                "teachername": "2B,A2,9s ",
+                "score": 100
+            },
+            {
+                "cid": 8,
+                "coursename": "Bloodborne",
+                "teachername": "Doll",
+                "score": 101
+            }
+        ]
+    }
+}
+```
+
+#### 失败实例
+
+```json
+{
+    "code": 200,
+    "message": "第10页课程信息",
+    "data": {
+        "count": 13,
+        "pageInfo": []
+    }
+}
+```
+
+### 返回参数说明
+
+|   参数名    |  类型  |            说明             |
+| :---------: | :----: | :-------------------------: |
+|    count    |  int   |          课程总数           |
+|     cid     |  int   |           课程ID            |
+| coursename  | stirng |           课程名            |
+| teachername | string | 教师名, 多个教师以 ',' 隔开 |
+|    score    |  int   |          课程评分           |
+
+### 备注
+
+如果要获取所有课程信息, 不在请求头中添加任何参数即可.
+
+## 课程信息获取接口
+
+### 请求URL
+
+- `/course/{cid}`
+
+### 请求方式
+
+- GET
+
+### 参数
+
+| 参数名 | 必选 | 类型 | 说明 |
+| :----: | :--: | :--: | :--: |
+|  N/A   | N/A  | N/A  | N/A  |
+
+### 返回示例
+
+#### 成功实例
+
+```json
+{
+    "code": 200,
+    "message": "课程信息",
+    "data": {
+        "cid": 0,
+        "coursename": "God of War",
+        "teachername": "Kratos",
+        "score": 100
+    }
+}
+```
+
+#### 失败实例
+
+```json
+{
+    "code": 404,
+    "message": "课程不存在",
+    "data": false
+}
+```
+
+### 返回参数说明
+
+|   参数名    |  类型  |            说明             |
+| :---------: | :----: | :-------------------------: |
+|     cid     |  int   |           课程ID            |
+| coursename  | stirng |           课程名            |
+| teachername | string | 教师名, 多个教师以 ',' 隔开 |
+|    score    |  int   |          课程评分           |
+
+### 备注
+
+无.
+
+## 课程模糊查询接口
+
+## 课程信息获取接口
+
+### 请求URL
+
+- `/course/search`
+
+### 请求方式
+
+- GET
+
+### 参数
+
+| 参数名  | 必选 |  类型  |    说明    |
+| :-----: | :--: | :----: | :--------: |
+| keyword |  是  | string | 搜索关键字 |
+
+### 返回示例
+
+#### 成功实例
+
+```json
+{
+    "code": 200,
+    "message": "搜索信息",
+    "data": [
+        {
+            "cid": 0,
+            "coursename": "God of War",
+            "teachername": "Kratos",
+            "score": 100
+        },
+        {
+            "cid": 5,
+            "coursename": "The Witcher 3",
+            "teachername": "Geralt",
+            "score": 100
+        }
+    ]
+}
+```
+
+#### 失败实例
+
+```json
+{
+    "code": 200,
+    "message": "搜索信息",
+    "data": []
+}
+```
+
+### 返回参数说明
+
+|   参数名    |  类型  |            说明             |
+| :---------: | :----: | :-------------------------: |
+|     cid     |  int   |           课程ID            |
+| coursename  | stirng |           课程名            |
+| teachername | string | 教师名, 多个教师以 ',' 隔开 |
+|    score    |  int   |          课程评分           |
+
+### 备注
+
+无.
