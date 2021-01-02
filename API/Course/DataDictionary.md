@@ -37,7 +37,7 @@
 | 字段        | 类型            | 空   | 默认 | 注释       |
 | :---------- | :-------------- | :--- | ---- | ---------- |
 | id          | bigint unsigned | 否   |      | 主键       |
-| user_id     | bigint unsigned | 否   |      | 评分课程ID |
-| course_id   | bigint unsigned | 否   |      | 评分用户ID |
+| user_id     | bigint unsigned | 否   |      | 评论课程ID |
+| course_id   | bigint unsigned | 否   |      | 评论用户ID |
 | comments    | text            | 否   |      | 评论       |
-| create_time | int unsigned    | 否   |      | 评分时间   |
+| create_time | int unsigned    | 否   |      | 评论时间   |

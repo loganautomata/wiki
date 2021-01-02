@@ -510,7 +510,7 @@
 
 ### 请求URL
 
-- `/course/score`
+- `/score`
 
 ### 请求方式
 
@@ -560,7 +560,7 @@
 
 ### 请求URL
 
-- `/course/score`
+- `/score`
 
 ### 请求方式
 
@@ -610,7 +610,7 @@
 
 ### 请求URL
 
-- `/course/comment`
+- `/comment`
 
 ### 请求方式
 
@@ -660,7 +660,7 @@
 
 ### 请求URL
 
-- `/course/comment`
+- `/comment`
 
 ### 请求方式
 
@@ -709,7 +709,7 @@
 
 ### 请求URL
 
-- `/course/comment`
+- `/comment`
 
 ### 请求方式
 
@@ -757,7 +757,7 @@
 
 ### 请求URL
 
-- `/course/comment/{cid}`
+- `/comment/{cid}`
 
 ### 请求方式
 
