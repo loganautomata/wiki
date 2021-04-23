@@ -39,6 +39,6 @@ var pio = new Paul_Pio({
         "custom": []
     },
     "night": "changeTheme('dark')",
-    "model": ["https://cdn.jsdelivr.net/gh/loganautomata/cdn@master/wiki/models/sagiri/model.json"],
+    "model": ["../live2d-models/sagiri/model.json"],
     "tips": true
 });
