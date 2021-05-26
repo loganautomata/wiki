@@ -1,7 +1,7 @@
 <!-- _coverpage.md -->
 
 <div class='cover'>
-    <a href="https://wiki.loganren.xyz">
+    <a href="https://wiki.logan.ren">
         <img class='avatar'src="https://images.loganren.xyz/images/2021/02/06/sagiri-300.png"></img>
     </a>
 </div>
@@ -32,6 +32,6 @@
 
 ## LoganのWIKI
 
-[Blog](https://loganren.xyz)
+[Blog](https://blog.logan.ren)
 [Tel](https://t.me/loganautomata)
 [Go](/home.md)

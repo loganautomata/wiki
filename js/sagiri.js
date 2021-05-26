@@ -33,12 +33,12 @@ var pio = new Paul_Pio({
         "touch": ["你不会是个Hentai吧!", "再摸的话我可要报警了！⌇●﹏●", "别摸我，有什么好摸的", "110吗，这里有个变态一直在摸我(ó﹏ò｡)", "干嘛动我呀！小心我咬你！"],
         "skin": ["想看看我的新服装吗？", "新衣服真漂亮~"],
         "home": "让我们回家吧！",
-        "link": "https://loganren.xyz/",
+        "link": "https://blog.logan.ren",
         "close": "有缘再会吧~",
         "referer": "你在 %t 的指引下来到这里(๑•̀ㅂ•́)و✧",
         "custom": []
     },
     "night": "changeTheme('dark')",
-    "model": ["../live2d-models/sagiri/model.json"],
+    "model": ["https://wp.oss.logan.ren/live2d-models/sagiri/model.json"],
     "tips": true
 });
