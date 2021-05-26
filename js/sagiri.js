@@ -42,3 +42,7 @@ var pio = new Paul_Pio({
     "model": ["https://wp.oss.logan.ren/live2d-models/sagiri/model.json"],
     "tips": true
 });
+
+if (window.console && window.console.log) {
+    console.log("%c Logan %c", "background:#FFA500; color:#ffffff", "", "https://blog.logan.ren/");
+}
