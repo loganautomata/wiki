@@ -1,5 +1,3 @@
 # WIKI主页
 
-* [API](API/)
-* [离散数学](GraphTheory/)
-* [Python](Python/)
+* [OUC公共课程评价网站](OUC_Course_Evaluate_Web/)

@@ -2,7 +2,7 @@
 
 <div class='cover'>
     <a href="https://wiki.logan.ren">
-        <img class='avatar'src="https://images.loganren.xyz/images/2021/02/06/sagiri-300.png"></img>
+        <img class='avatar'src="https://img.oss.logan.ren/2021/02/06/sagiri-300.png"></img>
     </a>
 </div>
 
